@@ -1,0 +1,22 @@
+# Secrets - NEVER commit these
+*.pem
+*.key
+.env
+*.tfvars
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+
+# Node
+node_modules/
+dist/
+
+# Worker scratch + logs
+worker/temp-repo/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
