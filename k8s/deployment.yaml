@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: clouddev
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: clouddev
+  template:
+    metadata:
+      labels:
+        app: clouddev
+    spec:
+      containers:
+        - name: clouddev
+          image: YOUR_DOCKERHUB_USER/clouddev-app:latest   # <- replace
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3000

@@ -1,0 +1,2 @@
+[servers]
+EC2_PUBLIC_IP ansible_user=ubuntu ansible_ssh_private_key_file=~/.ssh/clouddev-key.pem

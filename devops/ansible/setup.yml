@@ -1,0 +1,26 @@
+---
+- name: Setup EC2 Server
+  hosts: servers
+  become: true
+
+  tasks:
+    - name: Update apt packages
+      apt:
+        update_cache: yes
+
+    - name: Install Docker, Git, Node.js tooling
+      apt:
+        name: [docker.io, git, nodejs, npm]
+        state: present
+
+    - name: Start Docker
+      service:
+        name: docker
+        state: started
+        enabled: true
+
+    - name: Add ubuntu user to docker group
+      user:
+        name: ubuntu
+        groups: docker
+        append: yes
