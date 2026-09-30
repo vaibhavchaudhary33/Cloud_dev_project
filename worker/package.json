@@ -1,0 +1,7 @@
+{
+  "name": "worker",
+  "version": "1.0.0",
+  "main": "deploy.js",
+  "type": "commonjs",
+  "dependencies": { "simple-git": "^3.27.0" }
+}
