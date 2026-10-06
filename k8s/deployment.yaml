@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: clouddev
-          image: YOUR_DOCKERHUB_USER/clouddev-app:latest   # <- replace
+          image: vaibhav39/clouddev-app:latest   # <- replace
           imagePullPolicy: Always
           ports:
             - containerPort: 3000
