@@ -15,6 +15,6 @@ spec:
       containers:
         - name: clouddev
           image: vaibhav39/clouddev-app:latest   # <- replace
-          imagePullPolicy: Always
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 3000
